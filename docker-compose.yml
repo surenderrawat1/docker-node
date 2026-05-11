@@ -11,9 +11,12 @@ services:
       - "8001:8000"
     volumes:
       - .:/app
-      - /app/node_modules
+      - node_modules:/app/node_modules
     networks:
       - shared_network
+
+volumes:
+  node_modules:
 
 networks:
   shared_network:
